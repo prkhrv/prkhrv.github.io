@@ -4,22 +4,22 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday Anu</title>
+  <title>Happy Birthday Anukrati :)</title>
       <meta charset="utf-8">
       <meta name="Description" CONTENT="DawnMist">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords" content="HTML,CSS,XML,JavaScript">
       <meta name="theme-color" content="#030303">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" type="text/css" href="css/style2.css">
+      <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" type="text/css" href="../css/style2.css">
+      <link rel="icon" type="image/png" sizes="32x32" href="../images/fav.png">
       <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
       <link href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-      <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet"> 
-      <link rel="icon" type="image/png" sizes="32x32" href="./images/fav.png">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet"> 
 
 
 </head>
@@ -42,11 +42,12 @@
     .maincont {
     height: 100%;
     width: 100%;
-   position: fixed;
+    position: fixed;
+    overflow-y: scroll;
     }
     .background
     {
-      background-image: url(./images/2.jpg);
+      background-image: url(../images/2.jpg);
       height: 100%;
       width: 100%;
       background-size: cover;
@@ -58,7 +59,7 @@
 
 <div class="flex-container" id="loader_maincont">
   <div class="unit">
-     <section class="wrapper dark">
+    <section class="wrapper dark">
   <div class="spinner">
     <i></i>
     <i></i>
@@ -75,32 +76,29 @@
   <div class="background"></div>
   <div class="maincont" id="content_wrap">
     <div class="overlayer" >
-      <div class="form animated fadeInDown" id="form_wrap">
-           <div id="circleparent" class="container">               
-            <div id="circle" class="animated shake delay-8s" style=" animation-iteration-count: 2;">
-              <div id="gift">
-                <div id="ribbon"></div>
-                <div id="giftbox"></div>
-              </div>
-            </div>
-          </div>
-        <p id="cap1">Tap on giftbox to open your gift</p>
-      <div id="login_form_cont" class="animated ">
-        <p class="">Happy Birthday</p>
-        <p style="font-size: 25px;">Let me make sure that it is you only!</p>
-        <p style="font-family: sans-serif; font-size: 20px;">Verify Yourself</p>
-        <p id="autherror" class="animated" style="display: none; font-size: 20px; color: #e8ff08;font-family: sans-serif;">Verification failed! You're not authenticated to access this content, try again</p>
-        <form action="./pages/main.html" method="POST" onsubmit="return verifyuser();">
-          <input name="user" class="txt-sml-2" placeholder="Username" required="" type="text" id="userid">
-          <input name="pass" class="txt-sml-2" placeholder="Password" required="" type="password" id="passid">
-          <br><br><center><button type="submit" class="btn btn-primary">Open Gift</button></center><br><br><br>
+      <div class="form animated fadeInDown container" id="form_wrap" style="width: 80%; height: unset;">
+        <div class="row">
+           <div class="col-sm-6">
+            <br><br><br><br><br>
+            <video width="100%" height="100%" controls="" poster="../images/poster.jpg">
+                <source src="https://prkhrv.github.io/anu.mp4" type="video/mp4">
+                <source src="videos/future.ogg" type="video/ogg">
 
-        </form> 
-      </div>
+            </video>
+          </div>
+          <div class="col-sm-6">
+             <p id="msg">
+              <span class="typed" id="typed"></span>
+                 
+             </p>
+           </div> 
+        </div> 
+
       </div>
 
 
     </div>
+
   </div>
 
 
@@ -108,7 +106,7 @@
 </body>
 <script>
 		$(window).on('load',(function() {
-  		$("#loader_maincont").delay(9000).fadeOut("slow");
+  		$("#loader_maincont").delay(5000).fadeOut("slow");
 
       //$("#form_wrap").fadeOut("slow");
 
@@ -125,11 +123,9 @@
     $("#circle").click(function()
         {
           $(this).addClass("zoomOutDown");
-          $("#circleparent").fadeOut();
           $('#cap1').fadeOut();
           $(this).css({"animation-iteration-count":"1"}).queue(function (next) {
-          
-          $('#login_form_cont').delay(1000).fadeIn();
+          $('#login_form_cont').delay(2000).fadeIn();
           next();
           });;
           
@@ -140,7 +136,19 @@
 
     });
 
-
 	</script>
-  <script type="text/javascript" src="./js/authenticate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+    var options = {
+    strings: ['<br><center><p class="birthdaycap">Hey Anu,<br>Happy Birthday<br></p></center> ^600 ', 'Wish You a very Happy Birthday Dear, I hope You get a lot of happiness in your life and achieve all you wish for, I wish you keep carrying your really adorable smile like this always.<br>once again A very very <h1>Happy Birthday Anukrati</h1><h1>Keep Smiling :-)</h1>'],
+      typeSpeed: 60,
+      startDelay:8000
+    }
+
+    var typed = new Typed("#typed", options);
+    });
+  </script>
+      
+
 </html>
