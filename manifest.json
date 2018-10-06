@@ -11,8 +11,8 @@
   "manifest_version": 2,
   "icons": [
     {
-   "src": "./image/flap.png",
-   "sizes": "144x144",
+   "src": "./image/android-icon-192x192.png",
+   "sizes": "192x192",
    "type": "image/png",
    "density": "4.0"
   }
