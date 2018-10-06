@@ -9,7 +9,7 @@ var files = [
   'https://prkhrv.github.io', //SW treats query string as new request
   'https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700', //caching 3rd party content
   './CSS/Form.css',
-  './image/flap.png',
+  './image/android-icon-192x192.png',
   './js/main.js',
   './js/app.js',
   './js/offline.js',
