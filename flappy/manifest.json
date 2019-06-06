@@ -3,7 +3,7 @@
   "short_name": "Flappy Bird",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
-  "start_url": "https://prkhrv.github.io",
+  "start_url": "https://prkhrv.github.io/flappy/",
   "display": "standalone",
   "orientation": "portrait",
   "description": "Pithy description (132 characters or less, no HTML)",
