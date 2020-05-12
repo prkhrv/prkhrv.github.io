@@ -64,6 +64,9 @@ var POP = {
     ios:  null,
 
     init: function() {
+
+
+        mySound = new sound("./facebook_chat_pop.mp3");
    
         // the proportion of width to height
         POP.RATIO = POP.WIDTH / POP.HEIGHT;
@@ -305,6 +308,7 @@ POP.collides = function(a, b) {
         var radii_squared = (a.r + b.r) * (a.r + b.r);
 
         if (distance_squared < radii_squared) {
+            mySound.play();
             return true;
         } else {
             return false;
@@ -476,6 +480,23 @@ POP.Particle = function(x, y,r, col) {
     };
 
 };
+
+
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }    
+}
+
 
 window.addEventListener('load', POP.init, false);
 window.addEventListener('resize', POP.resize, false);
