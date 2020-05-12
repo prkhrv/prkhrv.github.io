@@ -392,7 +392,7 @@ POP.Bubble = function() {
 
     this.type = 'bubble';
     this.r = (Math.random() * 20) + 10;
-    this.speed = (Math.random() * 3) + 1;
+    this.speed = (Math.random() * 4) + 1;
  
     this.x = (Math.random() * (POP.WIDTH) - this.r);
     this.y = POP.HEIGHT + (Math.random() * 100) + 100;
@@ -418,6 +418,10 @@ POP.Bubble = function() {
 
         // if offscreen flag for removal
         if (this.y < -10) {
+            if(POP.score.escaped == 3){
+                alert("Game Over");
+                setTimeout(function(){ location.reload();  }, 1000);
+            }
             POP.score.escaped += 1; // update score
             this.remove = true;
         }
