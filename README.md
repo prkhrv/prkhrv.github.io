@@ -2,6 +2,6 @@
 
 ## **Projects**
 1. Portfolio
-    * https://prkhrv.github.io/about/
+    * https://prkhrv.github.io/
 2. Flappy Bird PWA    
     * https://prkhrv.github.io/flappy/    
